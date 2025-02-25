@@ -1,6 +1,7 @@
 # **Optimizing Public Safety and Traffic Management Through US Accident Data (2016-2023)**
 
-**Data Source**: https://www.kaggle.com/datasets/sobhanmoosavi/us-accidents/data
+## **Data Source**: 
+https://www.kaggle.com/datasets/sobhanmoosavi/us-accidents/data
 
 ## **Overview**  
 Traffic accidents in the U.S. contribute to significant **fatalities, injuries, economic losses, and congestion-related delays**. Understanding the **causes, patterns, and risk factors** behind accident severity is crucial for **improving public safety, optimizing emergency responses, and enhancing traffic management systems**. 
