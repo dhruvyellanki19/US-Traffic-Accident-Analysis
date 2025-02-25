@@ -1,120 +1,93 @@
-# **Optimizing Public Safety and Traffic Management Through US Accident Data (2016-2023)**  
+# **Optimizing Public Safety and Traffic Management Through US Accident Data (2016-2023)**
 
 ## **Overview**  
-Traffic accidents are a major concern in the U.S., leading to injuries, fatalities, congestion, and economic losses. Effective accident analysis and prediction can help mitigate risks, improve public safety, and enhance traffic management.  
+Traffic accidents in the U.S. contribute to significant **fatalities, injuries, economic losses, and congestion-related delays**. Understanding the **causes, patterns, and risk factors** behind accident severity is crucial for **improving public safety, optimizing emergency responses, and enhancing traffic management systems**. 
 
-This project leverages **7.7 million accident records (2016-2023)** to analyze patterns, trends, and risk factors influencing accident severity. Using machine learning models, we predict accident severity based on weather conditions, road features, and time-based factors. These insights can be used by policymakers, traffic authorities, and emergency response teams to prevent severe accidents and optimize traffic control strategies.  
+This project analyzes **7.7 million accident records (2016-2023)** to identify trends and influencing factors in accident severity. By leveraging **machine learning models**, the study aims to predict accident severity levels based on **weather conditions, road infrastructure, and temporal patterns**. The findings provide **actionable insights for policymakers, traffic engineers, and law enforcement agencies** to implement **effective safety interventions, reduce accident severity, and develop smarter traffic control strategies**.
 
----
-
-## **Problem Statement**  
-Highway accidents remain a critical public safety issue, affecting millions of people every year. Determining accident severity in advance can:  
-- Reduce fatalities and injuries by identifying high-risk situations.  
-- Optimize emergency response time by prioritizing severe accident-prone areas.  
-- Improve traffic flow management by deploying proactive safety measures.  
-
-However, traditional accident prediction methods fail to account for dynamic factors like weather conditions, congestion levels, and road design features. This project addresses these gaps by building a data-driven machine learning model that accurately predicts accident severity and helps decision-makers implement safety interventions.  
+<p align="center">
+  <img src="https://github.com/dhruvyellanki19/project_images/blob/8af7f7ee281f80a72dbd6e0934eb5a46212fd51e/Accident_analysis_image.png" width="500"/>
+</p>
 
 
----
+## **Problem Statement**
+Traffic accidents result in **injuries, fatalities, economic losses, and transportation disruptions**. Understanding the factors influencing accident severity is essential for **data-driven traffic management and road safety improvements**. This project aims to:
+- Analyze accident severity trends across the US using **historical accident data (2016-2023).**
+- Identify **high-risk locations** and **critical factors** influencing accident severity.
+- Develop **machine learning models** to predict accident severity, enabling preventive measures.
+- Assist in designing **intelligent traffic systems** that reduce the impact of severe accidents.
+- Provide **data-driven insights for policymakers** to enhance roadway safety.
 
-## **Motivation**  
-With over **7.7 million recorded accidents** across **49 states**, understanding patterns, trends, and risk factors is essential for data-driven decision-making in traffic safety. This study aims to:  
-- Identify high-risk locations and conditions leading to severe accidents.  
-- Predict accident severity based on weather, road conditions, and time-based factors.  
-- Provide actionable insights for reducing accident risks and improving emergency response.  
-- Assist transportation authorities in traffic control planning and infrastructure improvements.  
+## **Motivation**
+With **7.7 million recorded accidents across 49 states**, understanding accident patterns can help improve public safety and optimize traffic management. This study aims to:
+- Identify locations, weather conditions, and timeframes leading to severe accidents.
+- Predict accident severity using advanced ML models for better risk management.
+- Assist **traffic agencies, city planners, and policymakers** in taking proactive steps to reduce accidents.
+- Enhance **real-time decision-making** for emergency response teams.
+- Develop **preventive strategies** to mitigate accident severity in high-risk areas.
 
----
+## **Dataset & Features**
+- **Source**: US Accident Data (2016-2023)
+- **Size**: 7.7 million records
+- **Coverage**: 49 states, with a focus on major highways like **I-95, US-1, and State Hwy 42**
+- **Key Features**:
+  - **Weather conditions** (temperature, humidity, wind speed, precipitation)
+  - **Time-based attributes** (hour of day, weekday, peak hours, seasonal variations)
+  - **Road conditions** (visibility, number of lanes, traffic signals, speed limits, road surface type)
+  - **Accident severity levels** (1 to 4, representing minor to fatal accidents)
+  - **Traffic density and congestion levels**
 
-## **Objectives**  
-1. Analyze accident trends to determine the key factors influencing severity.  
-2. Develop predictive models for accident severity classification.  
-3. Identify high-risk zones and timeframes for targeted interventions.  
-4. Provide actionable insights for transportation authorities and policymakers.  
-5. Support emergency response teams in prioritizing accident-prone areas.  
+## **Methodology**
+### **1. Data Preprocessing**
+- **Handled missing values** via imputation strategies.
+- **Feature engineering** for weather impact, traffic patterns, and accident hotspots.
+- **Standardization and encoding** of categorical variables.
+- **Implemented geospatial data integration** to account for accident hotspots.
+- **Analyzed seasonal and temporal trends** to detect recurring accident patterns.
 
----
+### **2. Exploratory Data Analysis (EDA)**
+- **Accident frequency trends** across years, months, and hours.
+- **Impact of weather conditions on severity.**
+- **Geospatial analysis** to map high-risk accident locations.
+- **Comparative study of urban vs. rural accident trends.**
+- **Analysis of accident severity by highway type and congestion level.**
 
-## **Dataset & Features**  
-### **Dataset Overview**  
-- Source: U.S. Accident Data (2016-2023)  
-- Size: 7.7 million accident reports  
-- Coverage: 49 states (focus on I-95, US-1, and other highways)  
-
-### **Key Features**  
-- Weather conditions – Temperature, humidity, wind speed, precipitation  
-- Time-based attributes – Day/night, rush hours, weekday/weekend trends  
-- Road conditions – Visibility, number of lanes, speed limits, traffic signals  
-- Accident severity levels – Minor, moderate, and severe (target variable)  
-
----
-
-## **Data Processing Steps**  
-To improve model accuracy, the dataset underwent extensive preprocessing:  
-- Data Cleaning – Handled missing values, duplicate entries, and inconsistencies.  
-- Outlier Removal – Eliminated extreme cases to reduce bias in severity prediction.  
-- Feature Engineering – Created new attributes from existing data (e.g., temperature impact, peak traffic hours).  
-- Normalization & Encoding – Scaled numerical variables and converted categorical features for model training.  
-
----
-
-## **Methodology**  
-### **1. Exploratory Data Analysis (EDA)**  
-EDA was conducted to identify trends and key insights:  
-- Accident severity distribution across different conditions.  
-- Impact of weather factors (rain, snow, fog) on accident severity.  
-- High-risk accident locations & traffic congestion analysis.  
-
-### **2. Feature Selection & Model Interpretability**  
-- Correlation analysis to determine the most influential factors.  
-- Feature importance ranking for predictive performance improvement.  
-
-### **3. Machine Learning Models**  
-We implemented and evaluated multiple models:  
+### **3. Machine Learning Models**
+We implemented and evaluated multiple ML models:
 
 | Model                  | Accuracy | ROC-AUC |
 |------------------------|----------|---------|
-| Random Forest         | 90.95%   | 0.79    |
-| Gradient Boosting     | 89.67%   | 0.73    |
-| Logistic Regression   | 88.65%   | 0.67    |
+| **Random Forest**      | **91.45%** | **0.81** |
+| **Gradient Boosting**  | 90.67%  | 0.73 |
+| **Logistic Regression** | 90.65%  | 0.67 |
 
-- Best Model: Random Forest, achieving 90.95% accuracy and 0.79 ROC-AUC.  
-- Key Findings from Feature Importance Analysis:  
-  - Temperature and humidity strongly influence accident severity.  
-  - Night-time accidents are more severe compared to daytime accidents.  
-  - High-speed highways report more severe accidents than urban roads.  
+- **Best Model**: Random Forest (**91.45% accuracy**, **0.81 ROC-AUC**)
+- **Key Features Identified**:
+  - **Temperature & Humidity** strongly influence accident severity.
+  - **Peak hours (4-7 PM)** contribute to higher accident counts.
+  - **Road type and visibility** affect severity levels.
+  - **Traffic congestion levels** play a significant role in determining accident outcomes.
+  - **Seasonal weather conditions** have a noticeable impact on accident trends.
 
----
-
-## **Key Findings**  
-- Peak accident hours: Most accidents occur between **4-7 PM** due to high traffic density.  
-- Weather impact: **Temperature and humidity are stronger predictors** of accident severity than rain or fog.  
-- High-risk locations: **I-95 and US-1** report the most severe accidents.  
-- Machine learning models effectively **predict accident severity**, enabling **preventive traffic management**.  
-
----
-
-## **Challenges & Limitations**  
-- Class imbalance: Severe accidents are less frequent, requiring oversampling techniques.  
-- Data inconsistencies: Some records lacked critical weather details, leading to data imputation.  
-- Geographic variations: Different states have different traffic laws, affecting severity trends.  
-
----
-
-
-
-## **Future Enhancements**  
-- Integration with real-time accident data for live risk assessment.  
-- Development of an interactive visualization dashboard.  
-- Advanced deep learning models for traffic image analysis.  
-- Collaboration with smart traffic management systems.  
-
----
-
-## **Conclusion**  
+## **Conclusion**
 From this project, we can conclude that machine learning models can effectively predict accident severity based on environmental and temporal factors such as temperature, humidity, wind speed, and time of day. Random Forest emerged as the most reliable model with an accuracy of 90.95% and a ROC-AUC score of 0.79, demonstrating its ability to handle imbalanced data and capture complex patterns. Gradient Boosting and Logistic Regression performed moderately, but their limitations in handling minority classes and non-linear relationships highlighted the advantages of Random Forest.
 
 Feature importance analysis showed that factors like temperature and humidity significantly influence accident severity, while conditions like rain and snow had minimal impact. These findings emphasize the importance of environmental and temporal variables in understanding accident dynamics. By identifying high-risk conditions and time periods, this project provides actionable insights for implementing targeted safety interventions, improving road safety, and potentially reducing the severity of accidents.
 
-This project demonstrated the potential of machine learning to provide actionable insights. By identifying high-risk scenarios, such as certain weather conditions or peak traffic times, we can guide targeted interventions like deploying traffic management measures or issuing real-time safety alerts. These findings reinforce the role of data-driven approaches in improving road safety and reducing the severity of accidents.
+This project demonstrated the potential of machine learning to provide actionable insights. By identifying high-risk scenarios, such as certain weather conditions or peak traffic times, we can guide targeted interventions like deploying traffic management measures, optimizing traffic signal timing, increasing law enforcement presence, or issuing real-time safety alerts.
+
+Additionally, preventive strategies such as improving roadway infrastructure, installing adaptive traffic control systems, integrating predictive analytics into transportation planning, and incorporating AI-powered early warning systems can significantly help in mitigating accident severity. Enhancing emergency response efficiency by allocating resources based on predicted accident hotspots will further improve public safety.
+
+These findings reinforce the role of data-driven approaches in improving road safety, reducing accident severity, and enabling smarter, more adaptive traffic management systems.
+The machine learning model successfully predicts accident severity based on weather, time, road conditions, and traffic data. While Random Forest performed the best, improvements in handling class imbalance and integrating real-time data sources can further enhance prediction accuracy. These findings can be leveraged by policymakers and traffic authorities to make data-driven decisions for safer roadways.
+
+By identifying high-risk scenarios, such as specific weather conditions, time periods, and congestion levels, authorities can implement targeted traffic management interventions and deploy early warning systems to minimize accident severity. This project reinforces the potential of AI-driven predictive models in traffic safety and intelligent transportation systems.
+
+
+
+## **Future Enhancements**
+- **Develop AI-powered early warning systems for high-risk areas.**
+- **Integrate deep learning models for real-time accident detection using traffic camera feeds.**
+- **Enhance geospatial accident mapping with real-time GPS tracking.**
+- **Implement SMOTE or other techniques to handle class imbalance more effectively.**
+- **Develop interactive dashboards for real-time accident monitoring and risk prediction.**
