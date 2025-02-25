@@ -98,15 +98,15 @@ By identifying high-risk scenarios, such as specific weather conditions, time pe
 
 
 ## **Technology Used**
-•	Python – For data processing and model development.
-•	Pandas & NumPy – For handling and transforming data.
-•	Matplotlib & Seaborn – For visualization and insights.
-•	Scikit-learn – For implementing machine learning models.
-•	Jupyter Notebook – For interactive analysis and development.
-•	Plotly – For creating interactive visualizations.
-•	Dask – For handling large datasets.
-•	Scipy – For statistical transformations.
-•	Statsmodels – Used for statistical analysis.
-•	KMeans (Scikit-Learn) – For clustering accident data.
-•	Statsmodels (VIF Analysis) – For handling multicollinearity.
-•	Scikit-learn – For model implementation.
+-	Python – For data processing and model development.
+-	Pandas & NumPy – For handling and transforming data.
+-	Matplotlib & Seaborn – For visualization and insights.
+-	Scikit-learn – For implementing machine learning models.
+-	Jupyter Notebook – For interactive analysis and development.
+-	Plotly – For creating interactive visualizations.
+-	Dask – For handling large datasets.
+-	Scipy – For statistical transformations.
+-	Statsmodels – Used for statistical analysis.
+-	KMeans (Scikit-Learn) – For clustering accident data.
+-	Statsmodels (VIF Analysis) – For handling multicollinearity.
+-	Scikit-learn – For model implementation.
