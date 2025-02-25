@@ -1,5 +1,7 @@
 # **Optimizing Public Safety and Traffic Management Through US Accident Data (2016-2023)**
 
+**Data Source**: https://www.kaggle.com/datasets/sobhanmoosavi/us-accidents/data
+
 ## **Overview**  
 Traffic accidents in the U.S. contribute to significant **fatalities, injuries, economic losses, and congestion-related delays**. Understanding the **causes, patterns, and risk factors** behind accident severity is crucial for **improving public safety, optimizing emergency responses, and enhancing traffic management systems**. 
 
@@ -91,3 +93,18 @@ By identifying high-risk scenarios, such as specific weather conditions, time pe
 - **Enhance geospatial accident mapping with real-time GPS tracking.**
 - **Implement SMOTE or other techniques to handle class imbalance more effectively.**
 - **Develop interactive dashboards for real-time accident monitoring and risk prediction.**
+
+
+## **Technology Used**
+•	Python – For data processing and model development.
+•	Pandas & NumPy – For handling and transforming data.
+•	Matplotlib & Seaborn – For visualization and insights.
+•	Scikit-learn – For implementing machine learning models.
+•	Jupyter Notebook – For interactive analysis and development.
+•	Plotly – For creating interactive visualizations.
+•	Dask – For handling large datasets.
+•	Scipy – For statistical transformations.
+•	Statsmodels – Used for statistical analysis.
+•	KMeans (Scikit-Learn) – For clustering accident data.
+•	Statsmodels (VIF Analysis) – For handling multicollinearity.
+•	Scikit-learn – For model implementation.
