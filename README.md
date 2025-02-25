@@ -3,6 +3,7 @@
 ## **Data Source**: 
 https://www.kaggle.com/datasets/sobhanmoosavi/us-accidents/data
 
+
 ## **Overview**  
 Traffic accidents in the U.S. contribute to significant **fatalities, injuries, economic losses, and congestion-related delays**. Understanding the **causes, patterns, and risk factors** behind accident severity is crucial for **improving public safety, optimizing emergency responses, and enhancing traffic management systems**. 
 
